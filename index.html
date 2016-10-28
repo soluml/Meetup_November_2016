@@ -7,7 +7,7 @@
 		<title>reveal.js</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/league.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -20,12 +20,68 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+    <style>
+      @keyframes rainbow {
+        0%   { border-color: #ff0000; }
+        10%  { border-color: #ff8000; }
+        20%  { border-color: #ffff00; }
+        30%  { border-color: #80ff00; }
+        40%  { border-color: #00ff00; }
+        50%  { border-color: #00ff80; }
+        60%  { border-color: #00ffff; }
+        70%  { border-color: #0080ff; }
+        80%  { border-color: #0000ff; }
+        90%  { border-color: #8000ff; }
+        100% { border-color: #ff0080; }
+      }
+      #intro {
+        border: 1.5vmin solid currentColor;
+        box-sizing: border-box;
+        font-size: 13vmin;
+        height: 54vmin;
+        margin: auto;
+        padding: .625em .3125em .3125em;
+        position: relative;
+        text-align: left;
+        white-space: nowrap;
+        width: 54vmin;
+      }
+      #intro:before {
+        animation: rainbow 2s infinite;
+        border: inherit;
+        bottom: -1.5vmin;
+        content: '';
+        filter: blur(2px);
+        left: -1.5vmin;
+        position: absolute;
+        right: -1.5vmin;
+        top: -1.5vmin;
+        z-index: -1;
+      }
+      #intro strong {
+        bottom: .5em;
+        font-size: 20%;
+        letter-spacing: .05em;
+        position: absolute;
+        right: .75em;
+        text-shadow: none;
+        z-index: 1;
+      }
+    </style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+        <section>
+          <h1 id="intro">
+            Effective & <wbr> Efficient CSS Modules
+            <br>
+            <strong>By Benjamin Solum</strong>
+          </h1>
+        </section>
+
+				<section>Specificity</section>
+				<section>Scope</section>
 			</div>
 		</div>
 
