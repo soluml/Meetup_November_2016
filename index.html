@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Effective &amp; Efficient CSS Modules by Benjamin Solum</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/league.css">
@@ -66,7 +66,7 @@
         border: inherit;
         bottom: 0;
         content: '';
-        filter: blur(2px);
+        filter: blur(calc(1.5vmax / 5));
         left: 0;
         position: absolute;
         right: 0;
@@ -89,38 +89,65 @@
         right: .75em;
         text-shadow: none;
       }
+      .classCodeTitle {
+        text-align: center!important;
+        text-shadow: none;
+      }
     </style>
 	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
+  <body>
+  	<div class="reveal">
+      <div class="slides">
         <section id="introslide">
           <h1 id="intro">
-            <span>Effective & <wbr> Efficient CSS Modules</span>
+            <span>Effective &amp;&amp; <br> Efficient CSS Modules</span>
             <strong>By Benjamin Solum</strong>
           </h1>
         </section>
-				<section>Specificity</section>
-				<section>Scope</section>
-			</div>
-		</div>
+        <section>
+          <section>
+            <h1><pre class="classCodeTitle"><code>whoami</code></pre><h1>
+          </section>
+          <section>
+            <pre><code class="html" style="white-space: pre-line;">&lt;head&gt;
+              &lt;title&gt;Senior Front-End Engineer at LifeWay&lt;/title&gt;
+              &lt;meta name="description" content="Work on the mywsb.com team building awesome web apps"&gt;
+              &lt;meta http-equiv="Content-Type" content="Human/Fargo,ND"&gt;
+              &lt;meta name="viewport" content="Work on Mac;Play on PC"&gt;
+              &lt;meta name="author" content="the news desk"&gt;
+              &lt;meta name="copyright" content="God"&gt;
+              &lt;meta name="twitter:site" content="@soluml"&gt;
+              &lt;!--[if IE]&gt;sad&lt;![endif]--&gt;
+              &lt;!--[if lt IE 9]&gt;really sad&lt;![endif]--&gt;
+            &lt;/head&gt;</code></pre>
+          </section>
+        </section>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+        <section>
+          Specificity
+          <aside class="notes">
+            Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+          </aside>
+        </section>
+        <section>Scope</section>
+      </div>
+  	</div>
 
-		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				history: true,
+  	<script src="lib/js/head.min.js"></script>
+  	<script src="js/reveal.js"></script>
+  	<script>
+  		// More info https://github.com/hakimel/reveal.js#configuration
+  		Reveal.initialize({
+  			history: true,
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+  			// More info https://github.com/hakimel/reveal.js#dependencies
+  			dependencies: [
+  				{ src: 'plugin/markdown/marked.js' },
+  				{ src: 'plugin/markdown/markdown.js' },
+  				{ src: 'plugin/notes/notes.js', async: true },
+  				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+  			]
+  		});
+  	</script>
+  </body>
 </html>
