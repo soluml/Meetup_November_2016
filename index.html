@@ -81,13 +81,16 @@
         transform: translateY(-50%);
       }
       #intro strong {
-        bottom: .5em;
+        bottom: .7em;
+        display: block;
         font-size: 25%;
         font-weight: normal;
+        left: 0;
         letter-spacing: .05em;
         position: absolute;
-        right: .75em;
+        text-align: center;
         text-shadow: none;
+        width: 100%;
       }
       .classCodeTitle {
         text-align: center!important;
@@ -100,15 +103,13 @@
       <div class="slides">
         <section id="introslide">
           <h1 id="intro">
-            <span>Effective &amp; <br> Efficient CSS Modules</span>
-            <strong>By Benjamin Solum</strong>
+            <span class="fragment">Effective &amp; <br> Efficient CSS Modules</span>
+            <strong>soluml.github.io/Meetup_November_2016</strong>
           </h1>
         </section>
         <section>
           <section>
-            <h1><pre class="classCodeTitle"><code>whoami</code></pre><h1>
-          </section>
-          <section>
+            <h1><pre class="classCodeTitle"><code>whoami</code></pre></h1>
             <pre><code class="html" style="white-space: pre-line;">&lt;head&gt;
               &nbsp;&nbsp;&lt;title&gt;Senior Front-End Engineer at LifeWay&lt;/title&gt;
               &nbsp;&nbsp;&lt;meta name="description" content="Work on the mywsb.com team building awesome web apps"&gt;
@@ -129,19 +130,34 @@
               <ul>
                 <li>Senior Front-End Engineer at LifeWay
                 <li>Live in Fargo, ND with wife and daughter
-                <li>Introduced to JS after being forged in the fires of jQuery
               </ul>
             </aside>
           </section>
         </section>
 
         <section>
-          Specificity
-          <aside class="notes">
-            Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-          </aside>
+          <h2>What are CSS Modules?</h2>
+          <blockquote>A CSS Module is a CSS file in which all class names and animation names are scoped locally by default</blockquote>
+          <p class="fragment">Generally, CSS module refers to CSS used in modular ways where we're managing CSS scope.</p>
+        </section>
+
+        <section>
+          <h2>How do we define effective &amp; efficient?</h2>
+          <ol>
+            <li class="fragment">Specificity</li>
+            <li class="fragment">Reusability</li>
+            <li class="fragment">Maintainability</li>
+            <li class="fragment">Bloat/Size</li>
+          </ol>
+        </section>
+
+        <section>
+          <h3>What is <u>Specificity</u></h3>
+          
         </section>
         <section>Scope</section>
+        <section>Maintainability</section>
+        <section>Bloat</section>
       </div>
   	</div>
 
