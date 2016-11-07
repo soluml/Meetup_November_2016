@@ -183,28 +183,37 @@
                   margin: 0;
                   padding: 0;
                   list-style: none;
-                }
 
-                li {
-                  display: inline-block;
-                }
+                  li {
+                    display: inline-block;
 
-                a {
-                  display: block;
-                  padding: 6px 12px;
-                  text-decoration: none;
+                    a {
+                      display: block;
+                      padding: 6px 12px;
+                      text-decoration: none;
 
-                  &:hover {
-                    background: #efefef;
+                      &:hover {
+                        background: #efefef;
+                      }
+                    }
                   }
                 }
               }
             </code></pre>
+            <aside class="notes">
+              This pattern was highly popularized by the emergeance of preprocessors.<br>
+              Coming soon to a browser near you!
+            </aside>
           </section>
           <section>
             <h3>Nested</h3>
             <ul>
-              <li class="fragment"></li>
+              <li>Highly maintainable and you get good specificity handling...</li>
+              <li class="fragment">...the more you sacrifice reusability</li>
+              <li class="fragment">
+                ...and bloat your files:<br>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/iMq2rrEWKJA" frameborder="0" allowfullscreen></iframe>
+              </li>
             </ul>
           </section>
         </section>
