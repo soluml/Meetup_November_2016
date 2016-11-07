@@ -149,26 +149,81 @@
         </section>
 
         <section>
-          <h2>How do I define effective &amp; efficient?</h2>
-          <ol>
-            <li class="fragment">Handles Specificity</li>
-            <li class="fragment">High Maintainability</li>
-            <li class="fragment">High Reusability</li>
-            <li class="fragment">Low Bloat / Small Size</li>
-          </ol>
+          <section>
+            <h2>How do I define effective &amp; efficient?</h2>
+            <ol>
+              <li class="fragment">Handles Specificity</li>
+              <li class="fragment">High Maintainability</li>
+              <li class="fragment">High Reusability</li>
+              <li class="fragment">Low Bloat / Small Size</li>
+            </ol>
+          </section>
+          <section>
+            <h3>What is <u>Specificity</u></h3>
+            <blockquote>Specificity is the means by which browsers decide which CSS property values are the most relevant to an element and, therefore, will be applied.</blockquote>
+            <hr>
+            <div id="specificity">
+              <div id="example" class="example">I'm an example! √</div>
+            </div>
+          </section>
         </section>
 
         <section>
-          <h3>What is <u>Specificity</u></h3>
-          <blockquote>Specificity is the means by which browsers decide which CSS property values are the most relevant to an element and, therefore, will be applied.</blockquote>
-          <hr>
-          <div id="specificity">
-            <div id="example" class="example">I'm an example! √</div>
-          </div>
+          <h2>The Patterns</h2>
         </section>
-        <section>Scope</section>
-        <section>Maintainability</section>
-        <section>Bloat</section>
+
+        <section>
+          <section>
+            <h3>Nested</h3>
+            <pre><code class="scss">
+              #nav {
+                background: #fff;
+
+                ul {
+                  margin: 0;
+                  padding: 0;
+                  list-style: none;
+                }
+
+                li {
+                  display: inline-block;
+                }
+
+                a {
+                  display: block;
+                  padding: 6px 12px;
+                  text-decoration: none;
+
+                  &:hover {
+                    background: #efefef;
+                  }
+                }
+              }
+            </code></pre>
+          </section>
+          <section>
+            <h3>Nested</h3>
+            <ul>
+              <li class="fragment"></li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <h3>The Naming Conventions: OOCSS, SMACSS, BEM</h3>
+        </section>
+
+        <section>
+          <h3>Inline</h3>
+        </section>
+
+        <section>
+          <h3>Aphrodite</h3>
+        </section>
+
+        <section>
+          <h3>Atomic / Functional</h3>
+        </section>
       </div>
   	</div>
 
