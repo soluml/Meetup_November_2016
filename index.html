@@ -224,8 +224,7 @@
               <ul>
                 <li>...the more you sacrifice reusability</li>
                 <li class="fragment">
-                  ...and bloat your files:<br>
-                  <iframe width="100%" height="315" src="https://www.youtube.com/embed/iMq2rrEWKJA" frameborder="0" allowfullscreen></iframe>
+                  ...and bloat your files: <a target="_blank" href="https://www.youtube.com/embed/iMq2rrEWKJA?autoplay=true"><img src="img/chocolate.gif" style="vertical-align: top; width: 300px; margin-left: 1em;"></a>
                 </li>
               </ul>
             </div>
@@ -258,15 +257,13 @@
             <h4>Pros:</h4>
             <ul>
               <li>Much less prone to bloat than the nested pattern.</li>
-              <li class="fragment">Highly reusable in comparison to nested pattern.</li>
+              <li class="fragment">Highly reusable in comparison to nested pattern.
             </ul>
             <div class="fragment">
               <h4>Cons:</h4>
               <ul>
                 <li>... nothing in comparison to the nested pattern</li>
-                <li class="fragment">
-                  ...but other patterns are even better in certain areas<br>
-                </li>
+                <li class="fragment">...but other patterns are even better in certain areas</li>
               </ul>
             </div>
           </section>
@@ -363,6 +360,36 @@
             <small><a href="https://www.smashingmagazine.com/2013/10/challenging-css-best-practices-atomic-approach/">Challenging CSS Best Practices</a> - Thierry Koblentz</small>
           </section>
           <section>
+            <h3>Atomic</h3>
+            <pre><code class="html">&lt;div class="positionAbs displayFlex displayBlock600mw"&gt;
+  Lorem ipsum
+&lt;/div&gt;</code></pre>
+            <pre><code class="css">.positionAbs { position: absolute; }
+.displayFlex { display: flex; }
+
+@media (max-width: 600px) {
+  .displayBlock600mw { display: block; }
+}
+</code></pre>
+          </section>
+          <section>
+            <h3>Atomic</h3>
+            <h4>Pros:</h4>
+            <ul>
+              <li>Same specificity as BEM</li>
+              <li class="fragment">Best in class reusability</li>
+              <li class="fragment">Same maintainability as Radium/Aphrodite</li>
+              <li class="fragment">ZERO. CODE. BLOAT.</li>
+            </ul>
+            <div class="fragment">
+              <h4>Cons:</h4>
+              <ul>
+                <li>Totally sucks to write :(</li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
             <h3>Atomic via Atomizer</h3>
             <pre><code class="js">//...Atomizer Config...
 breakPoints: {
@@ -375,7 +402,7 @@ custom: {
             <pre><code class="html">&lt;div class="Pos(a) Bgc(brandColor) W(columnWidth) H(90px)"&gt;
   Lorem ipsum
 &lt;/div&gt;
-&lt;div class="BdB Bdc(brandColor) Mstart(columnWidth) W(100%)--sm"&gt;
+&lt;div class="BdB Bdc(#000.5) Mstart(columnWidth) W(50%) W(100%)--sm"&gt;
   dolor sit amet
 &lt;/div&gt;</code></pre>
           </section>
