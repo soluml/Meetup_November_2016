@@ -388,7 +388,6 @@
               </ul>
             </div>
           </section>
-
           <section>
             <h3>Atomic via Atomizer</h3>
             <pre><code class="js">//...Atomizer Config...
@@ -406,16 +405,41 @@ custom: {
   dolor sit amet
 &lt;/div&gt;</code></pre>
           </section>
+        </section>
+
+        <section>
+          <h2>The Atomic Pattern at LifeWay</h2>
+        </section>
+
+        <section>
           <section>
-            <h3>Atomic via Atomizer</h3>
+            <h3>Step 1: Webpack</h3>
             <ul>
-              <li>Same specificity as BEM</li>
-              <li class="fragment">Best in class reusability</li>
-              <li class="fragment">Same maintainability as Radium/Aphrodite</li>
-              <li class="fragment">ZERO. CODE. BLOAT.</li>
-              <li class="fragment">It's just CSS, can be used as is or imported into a preprocessor file</li>
+              <li>The <a href="https://www.npmjs.com/package/webpack-atomizer-loader"><code>webpack-atomizer-loader</code></a> runs over our JSX files and creates <code>_atomic.scss</code></li>
+              <li><code>_atomic.scss</code> is a Sass partial that contains all of our Atomizer classes</li>
             </ul>
           </section>
+          <section>
+            <h3>Step 2: Webpack</h3>
+            <p>The Sass loader processes app.scss which looks like this:</p>
+            <pre><code class="scss">@import 'css-variables.json'; //Share vars between Sass/Atomizer
+@import 'base';
+@import 'atomic';
+@import 'helpers';
+@import 'animations';</code></pre>
+          </section>
+          <section>
+            <h3>Step 3: Webpack</h3>
+            <p>The <a href="https://www.npmjs.com/package/postcss-loader"><code>postcss-loader</code></a> runs next and pushes our CSS through <a href="https://www.npmjs.com/package/autoprefixer">Autoprefixer</a> (to add prefixes) and <a href="https://www.npmjs.com/package/cssnano">CSSNano</a> to squeeze every last byte out of our CSS file.</p>
+          </section>
+          <section>
+            <h3>Step 4: Webpack</h3>
+            <p>Finally, our CSS runs through the <a href="https://www.npmjs.com/package/css-loader"><code>css-loader</code></a> using <code>localIdentName</code> to obfuscate our class names and pass them in to our JSX to be used.</p>
+          </section>
+        </section>
+
+        <section>
+          <h2>Thanks!</h2>
         </section>
       </div>
   	</div>
